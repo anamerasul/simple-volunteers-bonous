@@ -1,8 +1,10 @@
 import React from 'react';
 import './Activity.css';
 
-const Activity = ({activity}) => {
-    const {title, img} = activity;
+const Activity = ({ activity }) => {
+    console.log(activity);
+    const { title, img } = activity;
+    console.log(img);
     return (
         <div className='activity'>
             <img src={img} alt="" />
