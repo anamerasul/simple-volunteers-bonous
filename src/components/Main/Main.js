@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import useVolunteers from '../../hooks/useVolunteers';
 import Activity from '../Activity/Activity';
 // import useVolunteers from '../../hooks/useVolunteers';
 // import Activity from '../Activity/Activity';
 import './Main.css'
 
 const Main = () => {
-    const [volunteers, setVolunteers] = useState([])
+    // const [volunteers, setVolunteers] = useState([])
 
-    useEffect(() => {
-        const url = `data.json`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setVolunteers(data))
-    }, [])
+    // useEffect(() => {
+    //     const url = `data.json`
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => setVolunteers(data))
+    // }, [])
+
+    const [volunteers] = useVolunteers([])
     // const [volunteers] = useVolunteers();
     // const [searchText, setSearchText] = useState('');
     // const [searchResult, setSearchResult] = useState([]);
